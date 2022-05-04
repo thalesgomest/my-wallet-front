@@ -4,12 +4,7 @@
         "es2021": true,
         "node": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "prettier",
-        "plugin:react/jsx-runtime"
-    ],
+    "extends": ["plugin:react/recommended", "airbnb", "prettier"],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -21,7 +16,6 @@
     "rules": {
         "prettier/prettier": "error",
         "no-console": "off",
-        "allowForLoopAfterthoughts": 0,
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "allowForLoopAfterthoughts": 0
     }
 }
