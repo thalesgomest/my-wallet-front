@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Raleway", sans-serif;
         background-color: #8c11be
     }
+    a {
+    text-decoration: none;
+    }
 
     * {
         box-sizing: border-box;

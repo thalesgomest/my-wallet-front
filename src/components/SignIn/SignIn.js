@@ -8,7 +8,7 @@ const SignInContainer = styled.div`
         font-size: 32px;
         line-height: 50px;
         color: #ffffff;
-        margin-top: 159px;
+        margin-top: 160px;
         margin-bottom: 37px;
         text-align: center;
     }
@@ -52,6 +52,11 @@ const Form = styled.form`
         color: transparent;
     }
 
+    .input-disabled {
+        background-color: rgba(212, 212, 212, 1);
+        color: rgba(175, 175, 175, 1);
+    }
+
     button {
         width: 326px;
         height: 46px;
@@ -62,6 +67,9 @@ const Form = styled.form`
         font-weight: 700;
         border-radius: 5px;
         border: 1px solid #a328d6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
