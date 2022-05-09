@@ -37,7 +37,7 @@ function EditRegisterPage() {
             loading: true,
             classNameLoading: 'input-disabled',
         });
-        const URL = `https://my-wallet-thalesgomest.herokuapp.com/user/registers/edit/${id}`;
+        const URL = `${process.env.REACT_APP_DB_URI}/user/registers/edit/${id}`;
 
         const config = {
             headers: {

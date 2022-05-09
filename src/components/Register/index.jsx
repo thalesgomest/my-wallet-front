@@ -35,7 +35,7 @@ function RegisterPage() {
         });
 
         const { token } = user;
-        const URL = `https://my-wallet-thalesgomest.herokuapp.com/user/register`;
+        const URL = `${process.env.REACT_APP_DB_URI}/user/register`;
 
         const config = {
             headers: {
