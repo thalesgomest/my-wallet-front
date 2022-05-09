@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { RiLogoutBoxRLine } from 'react-icons/ri';
+import { FiTrash2 } from 'react-icons/fi';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 
 import UserContext from '../../contexts/userContext';
@@ -72,6 +73,34 @@ function RegistersPage() {
             });
     };
 
+    function deleteMessage(id) {
+        // eslint-disable-next-line no-alert
+        const confirmation = window.confirm(
+            'Quer mesmo deletar essa transação?'
+        );
+
+        const { token } = user;
+        if (confirmation) {
+            const URL = `http://localhost:5000/user/registers/${id}`;
+
+            const config = {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            };
+
+            axios
+                .delete(URL, config)
+                .then(() => {
+                    getRegisters();
+                })
+                .catch((err) => {
+                    // eslint-disable-next-line no-alert
+                    alert(err.response.data);
+                });
+        }
+    }
+
     useEffect(() => {
         getRegisters();
     }, []);
@@ -95,7 +124,7 @@ function RegistersPage() {
                                 // eslint-disable-next-line no-underscore-dangle
                                 key={register._id}
                             >
-                                <div className="register-container-value-description">
+                                <div className="register-container-date-description">
                                     <span className="date">
                                         {register.date}
                                     </span>
@@ -109,6 +138,14 @@ function RegistersPage() {
                                             .toFixed(2)
                                             .replace('.', ',')}
                                     </h2>
+                                    <FiTrash2
+                                        className="delete-icon"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            // eslint-disable-next-line no-underscore-dangle
+                                            deleteMessage(register._id);
+                                        }}
+                                    />
                                 </div>
                             </RegisterContainer>
                         ))

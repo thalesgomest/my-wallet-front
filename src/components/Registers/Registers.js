@@ -68,7 +68,7 @@ const RegisterContainer = styled.div`
         color: ${(props) => props.type === 'outgoing' && '#C70000'};
     }
 
-    .register-container-value-description {
+    .register-container-date-description {
         word-wrap: break-word;
         display: flex;
 
@@ -80,6 +80,15 @@ const RegisterContainer = styled.div`
         }
         .description {
             padding-left: 10px;
+        }
+    }
+    .register-container-value {
+        display: flex;
+
+        .delete-icon {
+            font-size: 16px;
+            color: #c6c6c6;
+            margin-left: 5px;
         }
     }
 `;
