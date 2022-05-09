@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import dotenv from 'dotenv';
 import { RiLogoutBoxRLine } from 'react-icons/ri';
 import { FiTrash2 } from 'react-icons/fi';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
-
 import UserContext from '../../contexts/userContext';
 import {
     HeaderRegisters,
@@ -15,6 +15,8 @@ import {
     NewRegisterButton,
 } from './Registers';
 
+dotenv.config();
+
 function RegistersPage() {
     const { user } = useContext(UserContext);
     const [registers, setRegisters] = useState([]);
@@ -23,7 +25,7 @@ function RegistersPage() {
     const typeRegister = ['incoming', 'outgoing'];
 
     const getRegisters = () => {
-        const URL = 'http://localhost:5000/user/registers';
+        const URL = `${process.env.REACT_APP_DB_URI}/user/registers`;
         const { token } = user;
 
         const config = {
@@ -55,7 +57,7 @@ function RegistersPage() {
 
     const logOut = () => {
         const { token } = user;
-        const URL = 'http://localhost:5000/auth/logout';
+        const URL = `${process.env.REACT_APP_DB_URI}/auth/logout`;
 
         const config = {
             headers: {
@@ -81,7 +83,7 @@ function RegistersPage() {
 
         const { token } = user;
         if (confirmation) {
-            const URL = `http://localhost:5000/user/registers/${id}`;
+            const URL = `${process.env.REACT_APP_DB_URI}/user/registers/${id}`;
 
             const config = {
                 headers: {

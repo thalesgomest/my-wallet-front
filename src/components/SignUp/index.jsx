@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import dotenv from 'dotenv';
 import { ThreeDots } from 'react-loader-spinner';
 import { SignUpContainer, Form } from './SignUp';
+
+dotenv.config();
 
 function SignUpPage() {
     const [data, setData] = useState({
@@ -32,7 +35,7 @@ function SignUpPage() {
             classNameLoading: 'input-disabled',
         });
 
-        const URL = 'http://localhost:5000/auth/sign-up';
+        const URL = `${process.env.REACT_APP_DB_URI}/auth/sign-up`;
 
         axios
             .post(URL, {

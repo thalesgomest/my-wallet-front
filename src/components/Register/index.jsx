@@ -4,8 +4,11 @@ import { ThreeDots } from 'react-loader-spinner';
 import { IoMdReturnLeft } from 'react-icons/io';
 import dayjs from 'dayjs';
 import axios from 'axios';
+import dotenv from 'dotenv';
 import UserContext from '../../contexts/userContext';
 import { RegisterContainer, HeaderRegister, Form } from './Register';
+
+dotenv.config();
 
 function RegisterPage() {
     const { typeRegister } = useParams();
@@ -32,7 +35,7 @@ function RegisterPage() {
         });
 
         const { token } = user;
-        const URL = 'http://localhost:5000/user/register';
+        const URL = `${process.env.REACT_APP_DB_URI}/user/register`;
 
         const config = {
             headers: {

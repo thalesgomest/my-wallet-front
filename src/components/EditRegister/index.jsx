@@ -4,12 +4,15 @@ import { ThreeDots } from 'react-loader-spinner';
 import { IoMdReturnLeft } from 'react-icons/io';
 import dayjs from 'dayjs';
 import axios from 'axios';
+import dotenv from 'dotenv';
 import UserContext from '../../contexts/userContext';
 import {
     EditRegisterContainer,
     HeaderEditRegister,
     Form,
 } from './EditRegister';
+
+dotenv.config();
 
 function EditRegisterPage() {
     const { id } = useParams();
@@ -34,7 +37,7 @@ function EditRegisterPage() {
             loading: true,
             classNameLoading: 'input-disabled',
         });
-        const URL = `http://localhost:5000/user/registers/edit/${id}`;
+        const URL = `${process.env.REACT_APP_DB_URI}/user/registers/edit/${id}`;
 
         const config = {
             headers: {

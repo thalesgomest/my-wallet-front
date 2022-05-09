@@ -1,9 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import dotenv from 'dotenv';
 import { ThreeDots } from 'react-loader-spinner';
 import UserContext from '../../contexts/userContext';
 import { SignInContainer, Form } from './SignIn';
+
+dotenv.config();
 
 function SignInPage() {
     const navigate = useNavigate();
@@ -23,7 +26,7 @@ function SignInPage() {
             classNameLoading: 'input-disabled',
         });
 
-        const URL = 'http://localhost:5000/auth/login';
+        const URL = `${process.env.REACT_APP_DB_URI}/auth/login`;
 
         axios
             .post(URL, { email: userData.email, password: userData.password })
