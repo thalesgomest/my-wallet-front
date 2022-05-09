@@ -47,7 +47,7 @@ function SignUpPage() {
                     loading: false,
                     classNameLoading: '',
                 });
-                navigate('/login');
+                navigate('/');
             })
             .catch((err) => {
                 console.log({
@@ -166,7 +166,7 @@ function SignUpPage() {
                     </button>
                 )}
             </Form>
-            <Link to="/login">
+            <Link to="/">
                 <p>Já tem uma conta? Entre agora!</p>
             </Link>
         </SignUpContainer>

@@ -1,25 +1,23 @@
 import styled from 'styled-components';
 
-const SignUpContainer = styled.div`
+const RegisterContainer = styled.div``;
+
+const HeaderRegister = styled.header`
+    display: flex;
+    justify-content: space-between;
     h1 {
-        font-family: 'Saira Stencil One';
         font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 50px;
+        font-weight: 700;
+        font-size: 26px;
         color: #ffffff;
-        margin-top: 95px;
-        margin-bottom: 42px;
-        text-align: center;
+        margin: 25px 0 40px 25px;
     }
 
-    p {
+    .back-registers-button {
+        cursor: pointer;
         color: #ffffff;
-        font-size: 15px;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-        margin-top: 32px;
+        font-size: 25px;
+        margin: 25px 25px 0px 0px;
     }
 `;
 
@@ -67,19 +65,10 @@ const Form = styled.form`
         justify-content: center;
     }
 
-    .button-disabled {
-        background-color: rgba(93, 93, 94, 0.5);
-    }
-
     .input-disabled {
         background-color: rgba(212, 212, 212, 1);
         color: rgba(175, 175, 175, 1);
     }
-
-    .text-danger {
-        color: #ffffff;
-        margin-bottom: 13px;
-    }
 `;
 
-export { SignUpContainer, Form };
+export { RegisterContainer, HeaderRegister, Form };
