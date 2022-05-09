@@ -123,6 +123,20 @@ function RegistersPage() {
                                 type={register.type}
                                 // eslint-disable-next-line no-underscore-dangle
                                 key={register._id}
+                                onClick={() => {
+                                    navigate(
+                                        // eslint-disable-next-line no-underscore-dangle
+                                        `/user/register/edit/${register._id}`,
+                                        {
+                                            state: {
+                                                value: register.value,
+                                                description:
+                                                    register.description,
+                                                type: register.type,
+                                            },
+                                        }
+                                    );
+                                }}
                             >
                                 <div className="register-container-date-description">
                                     <span className="date">

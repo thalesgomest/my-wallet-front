@@ -6,6 +6,7 @@ import SignInPage from '../SignIn';
 import SignUpPage from '../SignUp';
 import RegistersPage from '../Registers';
 import RegisterPage from '../Register';
+import EditRegisterPage from '../EditRegister';
 
 function App() {
     const [user, setUser] = useState(
@@ -25,6 +26,10 @@ function App() {
                 <Route
                     path="/user/register/:typeRegister"
                     element={<RegisterPage />}
+                />
+                <Route
+                    path="/user/register/edit/:id"
+                    element={<EditRegisterPage />}
                 />
             </Routes>
         </UserContext.Provider>

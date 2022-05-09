@@ -1,108 +1,103 @@
 import React, { useState, useContext } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
 import { IoMdReturnLeft } from 'react-icons/io';
 import dayjs from 'dayjs';
 import axios from 'axios';
 import UserContext from '../../contexts/userContext';
-import { RegisterContainer, HeaderRegister, Form } from './Register';
+import {
+    EditRegisterContainer,
+    HeaderEditRegister,
+    Form,
+} from './EditRegister';
 
-function RegisterPage() {
-    const { typeRegister } = useParams();
+function EditRegisterPage() {
+    const { id } = useParams();
     const { user } = useContext(UserContext);
-    const [data, setData] = useState({
-        value: '',
-        description: '',
-        date: dayjs().format('DD/MM'),
-        type: typeRegister,
-    });
+    const { state } = useLocation();
+    const [registerValue, setRegisterValue] = useState(state.value);
+    const [registerDescription, setRegisterDescription] = useState(
+        state.description
+    );
+    // eslint-disable-next-line
+    const [typeRegister, setTypeRegister] = useState(state.type);
     const [dataLoading, setDataLoading] = useState({
         loading: false,
         classNameLoading: '',
     });
     const navigate = useNavigate();
 
-    const newRegister = (e) => {
+    const updateRegister = (e) => {
         e.preventDefault();
-
         setDataLoading({
             ...dataLoading,
             loading: true,
             classNameLoading: 'input-disabled',
         });
-
-        const { token } = user;
-        const URL = 'http://localhost:5000/user/register';
+        const URL = `http://localhost:5000/user/registers/edit/${id}`;
 
         const config = {
             headers: {
-                Authorization: `Bearer ${token}`,
+                Authorization: `Bearer ${user.token}`,
             },
         };
+
+        const data = {
+            value: registerValue,
+            description: registerDescription,
+            date: dayjs().format('DD/MM'),
+            type: typeRegister,
+        };
+
         axios
-            .post(URL, data, config)
+            .put(URL, data, config)
             .then(() => {
                 setDataLoading({
                     ...dataLoading,
                     loading: true,
                     classNameLoading: 'input-disabled',
                 });
-                setData({
-                    ...data,
-                    value: '',
-                    description: '',
-                });
                 navigate('/user/registers');
             })
             .catch((err) => {
-                console.log({ message: 'Error processing registration', err });
                 setDataLoading({
                     ...dataLoading,
                     loading: true,
                     classNameLoading: 'input-disabled',
                 });
+                console.log({ message: err.message, err });
             });
     };
 
     return (
-        <RegisterContainer>
-            <HeaderRegister>
+        <EditRegisterContainer>
+            <HeaderEditRegister>
                 {typeRegister === 'incoming' ? (
-                    <h1>Nova Entrada</h1>
+                    <h1>Editar Entrada</h1>
                 ) : (
-                    <h1>Nova Saída</h1>
+                    <h1>Editar Saída</h1>
                 )}
                 <IoMdReturnLeft
                     className="back-registers-button"
                     onClick={() => navigate('/user/registers')}
                 />
-            </HeaderRegister>
-            <Form onSubmit={newRegister}>
+            </HeaderEditRegister>
+            <Form onSubmit={updateRegister}>
                 <input
                     type="number"
                     placeholder="Valor"
-                    value={data.value}
+                    value={registerValue}
                     disabled={dataLoading.loading}
                     className={dataLoading.classNameLoading}
-                    onChange={(e) =>
-                        setData({
-                            ...data,
-                            value: e.target.value,
-                        })
-                    }
+                    onChange={(e) => setRegisterValue(e.target.value)}
                 />
                 <input
                     type="text"
                     placeholder="Descrição"
                     disabled={dataLoading.loading}
                     className={dataLoading.classNameLoading}
-                    value={data.description}
-                    onChange={(e) =>
-                        setData({
-                            ...data,
-                            description: e.target.value,
-                        })
-                    }
+                    value={registerDescription}
+                    onChange={(e) => setRegisterDescription(e.target.value)}
                 />
                 {typeRegister === 'incoming' ? (
                     <button type="submit">
@@ -113,7 +108,7 @@ function RegisterPage() {
                                 width={51}
                             />
                         ) : (
-                            'Salvar Entrada'
+                            'Atualizar Entrada'
                         )}
                     </button>
                 ) : (
@@ -125,13 +120,13 @@ function RegisterPage() {
                                 width={51}
                             />
                         ) : (
-                            'Salvar Saída'
+                            'Atualizar Saída'
                         )}
                     </button>
                 )}
             </Form>
-        </RegisterContainer>
+        </EditRegisterContainer>
     );
 }
 
-export default RegisterPage;
+export default EditRegisterPage;
