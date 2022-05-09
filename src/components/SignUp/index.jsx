@@ -35,7 +35,7 @@ function SignUpPage() {
             classNameLoading: 'input-disabled',
         });
 
-        const URL = `${process.env.REACT_APP_DB_URI}/auth/sign-up`;
+        const URL = `https://my-wallet-thalesgomest.herokuapp.com/auth/sign-up`;
 
         axios
             .post(URL, {

@@ -25,7 +25,7 @@ function RegistersPage() {
     const typeRegister = ['incoming', 'outgoing'];
 
     const getRegisters = () => {
-        const URL = `${process.env.REACT_APP_DB_URI}/user/registers`;
+        const URL = `https://my-wallet-thalesgomest.herokuapp.com/user/registers`;
         const { token } = user;
 
         const config = {
@@ -57,7 +57,7 @@ function RegistersPage() {
 
     const logOut = () => {
         const { token } = user;
-        const URL = `${process.env.REACT_APP_DB_URI}/auth/logout`;
+        const URL = `https://my-wallet-thalesgomest.herokuapp.com/auth/logout`;
 
         const config = {
             headers: {
@@ -83,7 +83,7 @@ function RegistersPage() {
 
         const { token } = user;
         if (confirmation) {
-            const URL = `${process.env.REACT_APP_DB_URI}/user/registers/${id}`;
+            const URL = `https://my-wallet-thalesgomest.herokuapp.com/user/registers/${id}`;
 
             const config = {
                 headers: {
