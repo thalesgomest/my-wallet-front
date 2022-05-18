@@ -3,6 +3,8 @@
 </p>
 
 ## Technologies
+
+![uses-react](https://img.shields.io/badge/REACT-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![uses-node js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![npm](https://img.shields.io/badge/npm-D12228?style=for-the-badge&logo=npm)
 ![express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
@@ -26,34 +28,6 @@ and see your balance. All datas are editable and they can be deleted too</p>
 ## Status
 ![status-finished](https://user-images.githubusercontent.com/97575616/152926720-d042178b-24c0-4d6b-94fb-0ccbd3c082cc.svg)
 <!-- ![status-in-progress](https://user-images.githubusercontent.com/97575616/153774620-d6a0a615-9d38-4402-ae72-20c52f8bbd5c.svg) -->
-
-## How to run
-
-### Requirements:
-
-Before starting, you'll need to have the following tools installed on your machine: [Node.js](https://nodejs.org/en/),
-
-
-1. Clone this repository
-```bash
-$ git clone https://github.com/thalesgomest/my-wallet-back.git
-```
-2. Change to project directory
-```bash
-$ cd my-wallet-back
-```
-3. Install the dependencies
-```bash
-$ npm or yarn install
-```
-4. to run in dev
-```bash
-$ node index.js
-```
-5. Server
-```bash
-# The server will start on port:5000 - go to <http://localhost:5000>
-```
 
 
 ### Author
