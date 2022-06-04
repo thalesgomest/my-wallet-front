@@ -12,10 +12,9 @@
 ![built-with-git](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
 ![built-with-vsc](https://img.shields.io/badge/VISUAL%20STUDIO%20CODE-blue?style=for-the-badge&logo=visualstudiocode)
 
-
-
 ## Table of contents
 * [Project Description](#project-description)
+* [Mockup](#mockup)
 * [Status](#status)
 * [How to run](#how-to-run)
 * [Author](#author)
@@ -24,6 +23,10 @@
 ## Project Description
 <p align="justify">This project is the front-end of my first project fullstack. MyWallet is a simple finance app, where you can register yours financial incomings and outgoings daily, 
 and see your balance. All datas are editable and they can be deleted too</p>
+
+## Mockup
+
+![mockup](https://user-images.githubusercontent.com/97575616/172017747-3254b7f8-bdbf-4990-8058-1cbc779d5e24.png)
 
 ## Status
 ![status-finished](https://user-images.githubusercontent.com/97575616/152926720-d042178b-24c0-4d6b-94fb-0ccbd3c082cc.svg)
