@@ -18,7 +18,9 @@ and see your balance. All datas are editable and they can be deleted too</p>
 
 ## 📸 Mockup
 
-![mockup](https://user-images.githubusercontent.com/97575616/172017747-3254b7f8-bdbf-4990-8058-1cbc779d5e24.png)
+<div  align="center" >
+<img src="https://user-images.githubusercontent.com/97575616/172017747-3254b7f8-bdbf-4990-8058-1cbc779d5e24.png" alt="mockup">
+</div>
 
 ## 🚧 Status of work
 
