@@ -1,45 +1,55 @@
-<p align="center">
-<img width=300px src="https://user-images.githubusercontent.com/97575616/168936362-9dbafa7e-bbc5-4ffe-a00b-79c6cc86e990.png" >
-</p>
 
-## Technologies
+<img width=100% src="https://user-images.githubusercontent.com/97575616/192401215-519bb97e-78df-475d-a25b-1bbf8afc813a.png" >
 
-![uses-react](https://img.shields.io/badge/REACT-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![uses-node js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![npm](https://img.shields.io/badge/npm-D12228?style=for-the-badge&logo=npm)
-![express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-[![uses-javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://www.javascript.com)
-![built-with-git](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
-![built-with-vsc](https://img.shields.io/badge/VISUAL%20STUDIO%20CODE-blue?style=for-the-badge&logo=visualstudiocode)
+## 📑 Contents
 
-## Table of contents
-* [Project Description](#project-description)
-* [Mockup](#mockup)
-* [Status](#status)
-* [How to run](#how-to-run)
-* [Author](#author)
+-   [Project Description](#-project-description)
+-   [Mockup](#-mockup)
+-   [Status of work](#-status-of-work)
+-   [Features](#✅-features)
+-   [Build with](#%EF%B8%8F-build-with)
+-   [Contact](#-contact)
 
+## 📌 Project Description
 
-## Project Description
-<p align="justify">This project is the front-end of my first project fullstack. MyWallet is a simple finance app, where you can register yours financial incomings and outgoings daily, 
+<p align="justify">This project is the front-end of my first project fullstack. MyWallet is a simple finance app, where you can register yours financial incomings and outgoings daily,
 and see your balance. All datas are editable and they can be deleted too</p>
 
-## Mockup
+
+## 📸 Mockup
 
 ![mockup](https://user-images.githubusercontent.com/97575616/172017747-3254b7f8-bdbf-4990-8058-1cbc779d5e24.png)
 
-## Status
-![status-finished](https://user-images.githubusercontent.com/97575616/152926720-d042178b-24c0-4d6b-94fb-0ccbd3c082cc.svg)
-<!-- ![status-in-progress](https://user-images.githubusercontent.com/97575616/153774620-d6a0a615-9d38-4402-ae72-20c52f8bbd5c.svg) -->
+## 🚧 Status of work
+
+![status](https://img.shields.io/badge/Status-Finished-00920F?style=plastic)<br>
+
+<!-- ![status](https://img.shields.io/badge/Status-Progress-FFE70C?style=plastic) -->
+
+## ✅ Features
+
+-   [x] `Sign Up` - Receives username, avatar, email and password.
+
+-   [x] `Login` - Receives email and password.
+
+-   [x] `Registers` - you can register a incoming or a outgoing of money
+
+-   [x] `Edit register` - You can edit a register
+
+-   [x] `Record register` - you can see all of yours register and the balance amount
 
 
-### Author
----
-<div align="center">
-<img width= 200px src="https://user-images.githubusercontent.com/97575616/157583676-812b2612-a644-4c18-be9c-61f633406f50.png" alt=""/>
-  <p> <i><b>Thales Gomes Targino</i></b> </p>
+## 🛠️ Build with
 
-<br /> [![Twitter Badge](https://img.shields.io/badge/-@thales_targino-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/thales_targino)](https://twitter.com/thales_targino) [![Linkedin Badge](https://img.shields.io/badge/-thalesgomest-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thales-gomes-targino/)](https://www.linkedin.com/in/thales-gomes-targino/) 
-[![Gmail Badge](https://img.shields.io/badge/-thalestargino@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:thalestargino@gmail.com)](mailto:thalestargino@gmail.com)
-  
-</div>
+![uses-react](https://img.shields.io/badge/React-20232A?style=plastic&logo=react&logoColor=61DAFB)
+![uses-node js](https://img.shields.io/badge/Node.js-43853D?style=plastic&logo=node.js&logoColor=white)
+![npm](https://img.shields.io/badge/npm-D12228?style=plastic&logo=npm)
+![express](https://img.shields.io/badge/Express-000000?style=plastic&logo=express&logoColor=white)
+[![uses-javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=javascript&logoColor=black)](https://www.javascript.com)
+![built-with-git](https://img.shields.io/badge/Git-E34F26?style=plastic&logo=git&logoColor=white)
+![built-with-vsc](https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=plastic&logo=visualstudiocode)
+
+## 📫 Contact
+
+<a href = "mailto:thalestargino@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=plastic&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/thalesgomest/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=plastic&logo=linkedin&logoColor=white" target="_blank"></a>
